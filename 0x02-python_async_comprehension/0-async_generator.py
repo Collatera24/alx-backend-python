@@ -12,13 +12,3 @@ async def async_generator() -> Generator[float, None, None]:
     for _ in range(10):
         await asyncio.sleep(1)
         yield random.uniform() * 10
-
-
-
-# Example usage
-async def main():
-    async for number in async_generator():
-        print(number)
-
-if __name__ == "__main__":
-    asyncio.run(main())
